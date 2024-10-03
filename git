@@ -1,0 +1,38 @@
+[push]
+	default = matching
+[alias]
+	l = log --oneline --decorate --graph
+	la = l --all
+	lb = l --branches
+	egrep = grep -E
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+	add-nw = !sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
+	dif = diff --color-moved=dimmed-zebra --color-moved-ws=ignore-all-space
+	sho = show --color-moved=dimmed-zebra --color-moved-ws=ignore-all-space
+	chp = cherry-pick
+	chp-a = cherry-pick --abort
+	chp-c = cherry-pick --continue
+	chp-s = cherry-pick --skip
+	rb = rebase --rebase-merges
+	rb-a = rebase --abort
+	rb-c = rebase --continue
+	rb-s = rebase --skip
+	rb-u = rb --update-refs
+	mb = merge-base
+	mt = mergetool
+	sw = switch
+	br = branch
+[diff]
+	algorithm = histogram
+[delta]
+	features = side-by-side line-numbers decorations
+	syntax-theme = none
+	minus-style = "#FFFFFF #400000"
+	plus-style = "normal #004000"
+	minus-emph-style = "normal #C00000"
+	plus-emph-style = "normal #00C000"
+	file-style = "#6666FF"
+	file-decoration-style = "#6666FF ul"
+	hunk-header-style = omit
+	paging = always
