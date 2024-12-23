@@ -1,3 +1,5 @@
+[core]
+	pager = delta
 [push]
 	default = matching
 [alias]
