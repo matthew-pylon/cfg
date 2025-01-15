@@ -38,3 +38,5 @@
 	file-decoration-style = "#6666FF ul"
 	hunk-header-style = omit
 	paging = always
+[rerere]
+	enabled = true
